@@ -1,0 +1,28 @@
+
+ 1. Отобразить подключённый девайс в консоли.
+adb devices
+
+Открываем терминал Windows Power Shell (fastboot)
+ 2. Вывести адрес приложения todolist в системе Android
+
+ 3. Установить .apk файл приложениия todolist на телефон с компьютера через  ADB
+adb install "C:\Users\innao\OneDrive\Рабочий стол\todo.apk" (в кавычках путь файла .apk)
+
+ 4. Сделать скриншот запущенного приложения todolist и сразу скопировать на компьютер в одной команде.
+adb shell screencap\sdcard\screen_name.png (сделать скрин с экрана телефона)
+adb pull\sdcard\screen_name.png\"C:\Users\innao\OneDrive\Рабочий стол\QA" 
+
+
+
+ 5. Вывести в консоль логи приложения todolist
+adb logcat | grep -rnw "com.android.todolist"> todolist.log
+либо
+adb logcat | findstr "com.android.todolist"> todolist.log
+
+
+
+ 6. Скопировать логи приложения todolist на компьютер.
+Логи скопировать в текстовый файл .txt
+
+ 7. Удалить приложение todolist с телефона через ADB
+adb uninstall com.android.todolist
